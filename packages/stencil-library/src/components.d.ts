@@ -20,6 +20,9 @@ export namespace Components {
         "placeholder": string;
         "value": string;
     }
+    interface LabelComponent {
+        "label": string;
+    }
     interface ListComponent {
     }
     interface MyComponent {
@@ -74,6 +77,12 @@ declare global {
         prototype: HTMLInputComponentElement;
         new (): HTMLInputComponentElement;
     };
+    interface HTMLLabelComponentElement extends Components.LabelComponent, HTMLStencilElement {
+    }
+    var HTMLLabelComponentElement: {
+        prototype: HTMLLabelComponentElement;
+        new (): HTMLLabelComponentElement;
+    };
     interface HTMLListComponentElement extends Components.ListComponent, HTMLStencilElement {
     }
     var HTMLListComponentElement: {
@@ -102,6 +111,7 @@ declare global {
         "button-component": HTMLButtonComponentElement;
         "card-component": HTMLCardComponentElement;
         "input-component": HTMLInputComponentElement;
+        "label-component": HTMLLabelComponentElement;
         "list-component": HTMLListComponentElement;
         "my-component": HTMLMyComponentElement;
         "radio-component": HTMLRadioComponentElement;
@@ -123,6 +133,9 @@ declare namespace LocalJSX {
         "onValueChange"?: (event: InputComponentCustomEvent<any>) => void;
         "placeholder"?: string;
         "value"?: string;
+    }
+    interface LabelComponent {
+        "label"?: string;
     }
     interface ListComponent {
     }
@@ -152,6 +165,7 @@ declare namespace LocalJSX {
         "button-component": ButtonComponent;
         "card-component": CardComponent;
         "input-component": InputComponent;
+        "label-component": LabelComponent;
         "list-component": ListComponent;
         "my-component": MyComponent;
         "radio-component": RadioComponent;
@@ -165,6 +179,7 @@ declare module "@stencil/core" {
             "button-component": LocalJSX.ButtonComponent & JSXBase.HTMLAttributes<HTMLButtonComponentElement>;
             "card-component": LocalJSX.CardComponent & JSXBase.HTMLAttributes<HTMLCardComponentElement>;
             "input-component": LocalJSX.InputComponent & JSXBase.HTMLAttributes<HTMLInputComponentElement>;
+            "label-component": LocalJSX.LabelComponent & JSXBase.HTMLAttributes<HTMLLabelComponentElement>;
             "list-component": LocalJSX.ListComponent & JSXBase.HTMLAttributes<HTMLListComponentElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
             "radio-component": LocalJSX.RadioComponent & JSXBase.HTMLAttributes<HTMLRadioComponentElement>;

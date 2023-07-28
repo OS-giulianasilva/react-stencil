@@ -8,7 +8,7 @@ import { Component, Prop, h } from '@stencil/core';
 export class CardComponent {
 
   @Prop() cardTitle : string = "Title"
-  @Prop() cardSubtitle : string = "Subitle"
+  @Prop() cardSubtitle : string = "Subtitle"
 
   render() {
     return (

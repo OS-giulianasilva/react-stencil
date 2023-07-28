@@ -1,4 +1,4 @@
-import { Component, Event, EventEmitter, Prop, h } from '@stencil/core';
+import { Component, Event, EventEmitter, Listen, Prop, h } from '@stencil/core';
 
 @Component({
   tag: 'input-component',
@@ -11,16 +11,20 @@ export class InputComponent {
   @Prop() value: string;
   @Event() valueChange: EventEmitter;
 
-  handleInputChange(event: Event) {
-    const field = event.target as HTMLInputElement
-    this.value = field.value;
-    this.valueChange.emit(this.value)
+  @Listen('ionInput')
+  handleInputChange(event: CustomEvent) {
+    const field = event.detail
+    this.valueChange.emit(field.value)
   }
 
   render() {
     return (
-      <ion-input label={this.label} fill="outline" placeholder={this.placeholder} value={this.value} 
-      onInput={this.handleInputChange}></ion-input>
+      <ion-input 
+        label={this.label} 
+        fill="outline" 
+        placeholder={this.placeholder} 
+      >
+      </ion-input>
     );
   }
 

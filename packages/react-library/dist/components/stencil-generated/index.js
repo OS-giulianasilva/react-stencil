@@ -2,6 +2,7 @@ import { createReactComponent } from './react-component-lib';
 export const ButtonComponent = createReactComponent('button-component');
 export const CardComponent = createReactComponent('card-component');
 export const InputComponent = createReactComponent('input-component');
+export const LabelComponent = createReactComponent('label-component');
 export const ListComponent = createReactComponent('list-component');
 export const MyComponent = createReactComponent('my-component');
 export const RadioComponent = createReactComponent('radio-component');

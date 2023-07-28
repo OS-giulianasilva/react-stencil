@@ -7,10 +7,10 @@
 
 ## Properties
 
-| Property       | Attribute       | Description | Type     | Default     |
-| -------------- | --------------- | ----------- | -------- | ----------- |
-| `cardSubtitle` | `card-subtitle` |             | `string` | `"Subitle"` |
-| `cardTitle`    | `card-title`    |             | `string` | `"Title"`   |
+| Property       | Attribute       | Description | Type     | Default      |
+| -------------- | --------------- | ----------- | -------- | ------------ |
+| `cardSubtitle` | `card-subtitle` |             | `string` | `"Subtitle"` |
+| `cardTitle`    | `card-title`    |             | `string` | `"Title"`    |
 
 
 ----------------------------------------------
