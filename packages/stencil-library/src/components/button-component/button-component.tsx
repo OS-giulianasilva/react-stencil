@@ -8,9 +8,9 @@ import { ButtonSize } from '../enums';
 })
 export class ButtonComponent {
 
-  @Prop({ mutable: true }) name: string;
-  @Prop({ mutable: true }) color: string;
-  @Prop({ mutable: true }) size: number;
+  @Prop() name: string;
+  @Prop() color: string;
+  @Prop() size: number;
 
   @Watch('size')
   formatSize() {
